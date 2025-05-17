@@ -6,7 +6,7 @@ import (
 	"sync"
 	"testing"
 
-	"enzirion/gotaq"
+	"github.com/enzirion/gotaq"
 )
 
 func Test_EnqueueExecutesTask_Success(t *testing.T) {
