@@ -64,7 +64,7 @@ func (g *Gotaq) Enqueue(q Queue) {
 	g.ch <- q
 }
 
-// GracefulStop を呼ぶと、全てのタスクが完了するまで待機し、その後停止します。
-func (g *Gotaq) GracefulStop() {
+// Stop を呼ぶと、新規タスクの受付を停止します。Queueの実行完了は保証されていません。
+func (g *Gotaq) Stop() {
 	close(g.stop)
 }
